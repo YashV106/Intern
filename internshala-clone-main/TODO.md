@@ -1,0 +1,90 @@
+# Premium Resume Builder Module — TODO
+
+## Backend (server)
+- [ ] Update data models to support full Premium Resume requirements:
+  - [ ] `backend/Model/Resume.js`
+    - [ ] Store structured resume JSON (`resume_json` / `resumeData`)
+    - [ ] Store ATS PDF URL/path (`pdf_path` / `pdfUrl`)
+    - [ ] Store template name
+    - [ ] Store premium activation state + timestamps
+    - [ ] Store payment fields: orderId, paymentId, amount, currency, status, timestamp
+    - [ ] Store OTP verification metadata (or create dedicated model)
+  - [ ] `backend/Model/Application.js`
+    - [ ] Persist auto-attached generated resume fields (`resumeUrl`, `resumePhotoUrl`, `resumeUpdatedAt`, etc.)
+- [ ] Implement/complete premium endpoints in `backend/Routes/premiumResume.js` (auth protected):
+  - [ ] `POST /submit-form` (draft save; open to logged-in users)
+  - [ ] `POST /send-otp` (6-digit OTP, expires in 5 min, resend cooldown + resend attempt limits)
+  - [ ] `POST /verify-otp-and-create-order` (OTP verify; create Razorpay order ₹50; store orderId)
+  - [ ] `POST /verify-payment-and-generate` (verify Razorpay signature; generate ATS PDF; store pdf URL/path + mark premium active)
+  - [ ] `POST /download` (premium-only; return file/URL safely)
+  - [ ] Prevent unauthorized access to other students' resume
+- [ ] Upgrade `backend/services/resumePdf.js` to generate ATS-friendly A4 PDF:
+  - [ ] Proper multi-section corporate ATS layout with clean typography
+  - [ ] Includes: Photo, Contact Info, Career Objective/Summary, Education, Skills, Experience, Projects, Certifications, Achievements, Interests
+  - [ ] A4 print correctness + single-column, no decorative templates
+  - [ ] Handles dynamic arrays (education/skills/experience/projects/etc.)
+  - [ ] Links should be clickable in PDF (GitHub/LinkedIn/Portfolio)
+- [ ] Internship integration:
+  - [ ] Update `backend/Routes/application.js` to attach only a *paid generated premium resume*:
+    - [ ] If generated PDF exists => attach it
+    - [ ] If not => return error: `"Please generate your Premium Resume before applying."`
+- [ ] Security hardening:
+  - [ ] Hash OTP before storing (do not store plaintext OTP)
+  - [ ] Enforce max OTP verify attempts and resend cooldown
+  - [ ] Verify Razorpay signature before granting premium access
+  - [ ] Never generate/download PDF without OTP+payment verification
+  - [ ] Ensure endpoints use `req.user` studentId from auth token, not client-provided studentId
+
+## Frontend (Next.js)
+- [ ] Add sidebar + dashboard integration:
+  - [ ] Sidebar item: `📄 Resume Builder`
+  - [ ] Dashboard card section: Resume Status, Premium Status, Payment Status, Resume Last Updated
+  - [ ] Buttons:
+    - [ ] Generate Resume (opens OTP flow)
+    - [ ] Edit Resume (opens builder)
+    - [ ] Download Resume (premium-only)
+- [ ] Create Resume Builder UI:
+  - [ ] Route:
+    - [ ] Canonical: `/resume-builder`
+    - [ ] Alias (if needed): `/dashboard/resume` to match sidebar routing
+  - [ ] Modern responsive multi-step wizard:
+    - [ ] Step 1: Personal Info + Photo
+    - [ ] Step 2: Career Objective + Education (dynamic multiple)
+    - [ ] Step 3: Skills (tech/soft/languages dynamic)
+    - [ ] Step 4: Work Experience (dynamic multiple + currently working)
+    - [ ] Step 5: Projects (dynamic multiple)
+    - [ ] Step 6: Certifications + Achievements + Interests (dynamic multiple)
+    - [ ] Step 7: Preview + Generate (premium lock + upgrade card)
+  - [ ] Live preview updates instantly while typing
+  - [ ] ATS-friendly corporate preview layout (no AI template)
+  - [ ] Dark mode compatible + glassmorphism where appropriate
+  - [ ] Auto-save draft:
+    - [ ] Debounced backend calls OR local cache + periodic sync
+- [ ] OTP + Razorpay payment flow:
+  - [ ] Generate button triggers OTP modal:
+    - [ ] Timer (5 mins)
+    - [ ] Resend OTP (cooldown + attempt limits)
+    - [ ] Error display for invalid OTP
+  - [ ] After OTP verify => open Razorpay checkout ₹50
+  - [ ] On payment success:
+    - [ ] Show success state
+    - [ ] Enable Download Resume + mark premium active in UI
+- [ ] Internship apply integration:
+  - [ ] When applying:
+    - [ ] If generated premium resume exists => auto attach (handled by backend)
+    - [ ] If not => block and show `"Please generate your Premium Resume before applying."`
+
+## QA / Testing
+- [ ] E2E smoke test:
+  - [ ] Draft saved
+  - [ ] Preview updates while typing
+  - [ ] Generate flow: OTP -> verify -> Razorpay -> signature verification -> PDF generated
+  - [ ] Download works after payment only
+  - [ ] Apply internship attaches generated resume PDF automatically
+  - [ ] Apply internship blocks with required message if premium resume not generated
+- [ ] Security:
+  - [ ] Attempt to call APIs with another studentId => must be rejected
+  - [ ] OTP expiry after 5 minutes enforced
+  - [ ] OTP resend cooldown enforced
+  - [ ] Razorpay signature mismatch rejected
+- [ ] UI accessibility checks (keyboard, focus trap modal, aria labels)

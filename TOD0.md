@@ -1,0 +1,1 @@
+- [ ] Update Forgot Password page UI/state + required inline statusMessage + exact rate-limit message\n- [ ] Add “Forgot Password?” link to Navbar when user is logged out\n- [ ] Verify backend route path: /api/auth/forgot-password (no change unless required)\n- [ ] Run frontend/backend dev and manually test rate-limit UI and validation\n

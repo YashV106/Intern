@@ -1,0 +1,30 @@
+{
+  "name": "internshala-clone-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "dev:backend": "node index.js",
+    "dev:frontend": "npm --prefix ../internarea run dev",
+    "dev:all": "concurrently -k -n backend,frontend -c cyan,magenta \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "npm --prefix ../internarea run build",
+    "build": "npm run build:frontend && node --check index.js",
+    "build:all": "npm run build:frontend && node --check index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^9.0.3",
+    "puppeteer": "^23.7.0",
+    "ua-parser-js": "^2.0.10"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

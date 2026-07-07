@@ -1,0 +1,8 @@
+{
+  "name": "subscriptions-module",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "node --check ./src/index.js"
+  }
+}
