@@ -19,7 +19,15 @@ app.get("/", (req, res) => {
   res.send("hello this is internshala backend");
 });
 app.use("/api", getClientIp, parseUserAgent, router);
-connect();
+
+(async () => {
+  try {
+    await connect();
+  } catch (err) {
+    // Keep server running (existing behavior), but DB routes will remain 503 until DB is reachable.
+    console.error("Initial DB connect failed:", err?.message || err);
+  }
+})();
 
 app.use(
   "/uploads",

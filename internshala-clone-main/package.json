@@ -7,6 +7,9 @@
     "build": "npm --prefix ./internarea run build && node --check ./backend/index.js",
     "preview": "npm --prefix ./internshala-clone-main/internarea run build && npm --prefix ./internshala-clone-main/internarea run start",
     "lint": "npm --prefix ./internshala-clone-main/internarea run lint",
-    "start": "npm --prefix ./internshala-clone-main/backend run start"
+    "start": "npm --prefix ./internshala-clone-main/backend run start",
+
+    "build:dist": "npm run clean:dist && npm --prefix ./internarea run build && node ./scripts/build-dist-netlify.js",
+    "clean:dist": "node ./scripts/clean-dist.js"
   }
 }
