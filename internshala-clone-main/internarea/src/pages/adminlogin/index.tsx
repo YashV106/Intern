@@ -33,8 +33,13 @@ const index = () => {
         "http://localhost:5000/api/admin/adminlogin",
         formadata
       );
+
+      // Backend admin login is currently hardcoded and does not return a role/token.
+      // We treat successful login as admin session for client-side route protection.
+      window.localStorage.setItem("isAdmin", "true");
+
       toast.success(t("loginSuccess"));
-      router.push("/adminpanel");
+      router.push("/admin/dashboard");
     } catch (error) {
       console.log(error);
       toast.error(t("loginFailed"));

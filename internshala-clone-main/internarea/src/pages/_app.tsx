@@ -54,9 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
     path === "/userapplication" ||
     path === "/applications" ||
     path.startsWith("/dashboard/") ||
-    path.startsWith("/applications") ||
-    path.startsWith("/adminpanel") ||
-    path.startsWith("/adminlogin");
+    path.startsWith("/applications");
 
   return (
     <Provider store={store}>
