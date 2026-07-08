@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "npm --prefix ./internshala-clone-main/backend run dev:all",
-    "build": "npm --prefix ./internshala-clone-main/internarea run build && node --check ./internshala-clone-main/backend/index.js",
+    "dev": "npm --prefix ./backend run dev:all",
+    "build": "npm --prefix ./internarea run build && node --check ./backend/index.js",
     "preview": "npm --prefix ./internshala-clone-main/internarea run build && npm --prefix ./internshala-clone-main/internarea run start",
     "lint": "npm --prefix ./internshala-clone-main/internarea run lint",
     "start": "npm --prefix ./internshala-clone-main/backend run start"
