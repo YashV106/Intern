@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const apiBase =
-  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+const apiBase = process.env.NEXT_PUBLIC_BACKEND_URL;
+if (!apiBase) {
+  // In production, localhost fallback breaks API calls. Fail fast.
+  throw new Error(
+    "Missing NEXT_PUBLIC_BACKEND_URL. Set it in Netlify environment variables to point to your Express backend (e.g. https://your-backend.onrender.com)."
+  );
+}
 
 function getToken() {
   if (typeof window === "undefined") return null;

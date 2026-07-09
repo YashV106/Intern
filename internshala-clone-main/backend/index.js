@@ -6,7 +6,7 @@ const { connect } = require("./db");
 const router = require("./Routes/index");
 const parseUserAgent = require("./middleware/parseUserAgent");
 const getClientIp = require("./middleware/getClientIp");
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const path = require("path");
 

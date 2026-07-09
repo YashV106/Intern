@@ -26,7 +26,7 @@ const emailOtp = require("./emailOtp");
 const premiumResume = require("./premiumResume");
 const publicSpace = require("./publicSpace");
 
-const authForgotPassword = require("./auth/ForgotPassword");
+const authForgotPassword = require("./auth/forgotPassword");
 
 // DEBUG: validate route modules are functions/routers to avoid Express "argument handler must be a function"
 function assertRouter(name, mod) {

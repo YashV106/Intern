@@ -1,26 +1,6 @@
 [build]
-  publish = "internarea/dist"
-  command = "echo 'Using prebuilt dist folder (upload only).'"
+  command = "npm --prefix ./internarea run build"
+  publish = ".next"
 
-
-[functions]
-  directory = "internarea/dist/.netlify/functions"
-
-# Serve Next.js static assets normally; send everything else to the Netlify function.
-# (prevents breaking /_next/* asset loading)
-[[redirects]]
-  from = "/_next/*"
-  to = "/_next/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/public/*"
-  to = "/public/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
