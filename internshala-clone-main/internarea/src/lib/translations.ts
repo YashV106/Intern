@@ -66,11 +66,22 @@ export const translations = {
     adminPanelActiveInternships: "Active Internships",
     adminPanelConversionRate: "Conversion Rate",
     adminPanelViewApplications: "View Applications",
+    adminPanelViewApplicationsDescription: "View and manage all applications from candidates",
+
     adminPanelPostJob: "Post Job",
+    adminPanelPostJobDescription: "Create and publish new job opportunities",
+
     adminPanelPostInternship: "Post Internship",
+    adminPanelPostInternshipDescription: "Create and manage internship positions",
+
     adminPanelManageUsers: "Manage Users",
+    adminPanelManageUsersDescription: "View and manage user accounts",
+
     adminPanelAnalytics: "Analytics",
+    adminPanelAnalyticsDescription: "View detailed reports and statistics",
+
     adminPanelSettings: "Settings",
+    adminPanelSettingsDescription: "Configure system preferences",
     applicationsTitle: "Applications",
     applicationsDescription: "Manage and review all applications",
     applicationsSearchPlaceholder: "Search by company, category, or applicant...",
@@ -157,11 +168,27 @@ export const translations = {
     adminPanelActiveInternships: "Pasantías activas",
     adminPanelConversionRate: "Tasa de conversión",
     adminPanelViewApplications: "Ver solicitudes",
+    adminPanelViewApplicationsDescription:
+      "Ver y gestionar todas las solicitudes de los candidatos",
+
     adminPanelPostJob: "Publicar empleo",
+    adminPanelPostJobDescription:
+      "Crear y publicar nuevas oportunidades laborales",
+
     adminPanelPostInternship: "Publicar pasantía",
+    adminPanelPostInternshipDescription:
+      "Crear y gestionar puestos de prácticas",
+
     adminPanelManageUsers: "Gestionar usuarios",
+    adminPanelManageUsersDescription:
+      "Ver y gestionar las cuentas de los usuarios",
+
     adminPanelAnalytics: "Analíticas",
+    adminPanelAnalyticsDescription:
+      "Ver informes y estadísticas detallados",
+
     adminPanelSettings: "Configuración",
+    adminPanelSettingsDescription: "Configurar preferencias del sistema",
     applicationsTitle: "Solicitudes",
     applicationsDescription: "Gestiona y revisa todas las solicitudes",
     applicationsSearchPlaceholder: "Buscar por empresa, categoría o candidato...",
@@ -248,11 +275,27 @@ export const translations = {
     adminPanelActiveInternships: "सक्रिय इंटर्नशिप",
     adminPanelConversionRate: "परिवर्तन दर",
     adminPanelViewApplications: "आवेदन देखें",
+    adminPanelViewApplicationsDescription:
+      "उम्मीदवारों से आने वाले सभी आवेदनों को देखें और प्रबंधित करें",
+
     adminPanelPostJob: "नौकरी पोस्ट करें",
+    adminPanelPostJobDescription:
+      "नई नौकरी के अवसर बनाएं और प्रकाशित करें",
+
     adminPanelPostInternship: "इंटर्नशिप पोस्ट करें",
+    adminPanelPostInternshipDescription:
+      "इंटर्नशिप पदों को बनाएं और प्रबंधित करें",
+
     adminPanelManageUsers: "यूज़र प्रबंधित करें",
+    adminPanelManageUsersDescription:
+      "यूज़र खातों को देखें और प्रबंधित करें",
+
     adminPanelAnalytics: "विश्लेषण",
+    adminPanelAnalyticsDescription:
+      "विस्तृत रिपोर्ट और सांख्यिकी देखें",
+
     adminPanelSettings: "सेटिंग्स",
+    adminPanelSettingsDescription: "सिस्टम प्राथमिकताएँ कॉन्फ़िगर करें",
     applicationsTitle: "आवेदन",
     applicationsDescription: "सभी आवेदनों को प्रबंधित और समीक्षा करें",
     applicationsSearchPlaceholder: "कंपनी, श्रेणी, या आवेदक से खोजें...",
@@ -339,11 +382,27 @@ export const translations = {
     adminPanelActiveInternships: "Estágios ativos",
     adminPanelConversionRate: "Taxa de conversão",
     adminPanelViewApplications: "Ver inscrições",
+    adminPanelViewApplicationsDescription:
+      "Ver e gerenciar todas as inscrições dos candidatos",
+
     adminPanelPostJob: "Publicar vaga",
+    adminPanelPostJobDescription:
+      "Criar e publicar novas oportunidades de emprego",
+
     adminPanelPostInternship: "Publicar estágio",
+    adminPanelPostInternshipDescription:
+      "Criar e gerenciar posições de estágio",
+
     adminPanelManageUsers: "Gerenciar usuários",
+    adminPanelManageUsersDescription:
+      "Ver e gerenciar contas de usuários",
+
     adminPanelAnalytics: "Análises",
+    adminPanelAnalyticsDescription:
+      "Ver relatórios e estatísticas detalhados",
+
     adminPanelSettings: "Configurações",
+    adminPanelSettingsDescription: "Configurar preferências do sistema",
     applicationsTitle: "Inscrições",
     applicationsDescription: "Gerencie e revise todas as inscrições",
     applicationsSearchPlaceholder: "Buscar por empresa, categoria ou candidato...",
@@ -430,11 +489,22 @@ export const translations = {
     adminPanelActiveInternships: "活跃实习",
     adminPanelConversionRate: "转化率",
     adminPanelViewApplications: "查看申请",
+    adminPanelViewApplicationsDescription: "查看并管理来自候选人的所有申请",
+
     adminPanelPostJob: "发布工作",
+    adminPanelPostJobDescription: "创建并发布新的工作机会",
+
     adminPanelPostInternship: "发布实习",
+    adminPanelPostInternshipDescription: "创建并管理实习岗位",
+
     adminPanelManageUsers: "管理用户",
+    adminPanelManageUsersDescription: "查看并管理用户账号",
+
     adminPanelAnalytics: "分析",
+    adminPanelAnalyticsDescription: "查看详细报告和统计数据",
+
     adminPanelSettings: "设置",
+    adminPanelSettingsDescription: "配置系统偏好",
     applicationsTitle: "申请",
     applicationsDescription: "管理和审核所有申请",
     applicationsSearchPlaceholder: "按公司、类别或申请人搜索...",
@@ -540,11 +610,27 @@ export const translations = {
     adminPanelActiveInternships: "Stages actifs",
     adminPanelConversionRate: "Taux de conversion",
     adminPanelViewApplications: "Voir les candidatures",
+    adminPanelViewApplicationsDescription:
+      "Voir et gérer toutes les candidatures des candidats",
+
     adminPanelPostJob: "Publier un emploi",
+    adminPanelPostJobDescription:
+      "Créer et publier de nouvelles offres d’emploi",
+
     adminPanelPostInternship: "Publier un stage",
+    adminPanelPostInternshipDescription:
+      "Créer et gérer des postes de stage",
+
     adminPanelManageUsers: "Gérer les utilisateurs",
+    adminPanelManageUsersDescription:
+      "Voir et gérer les comptes des utilisateurs",
+
     adminPanelAnalytics: "Analyses",
+    adminPanelAnalyticsDescription:
+      "Voir des rapports détaillés et des statistiques",
+
     adminPanelSettings: "Paramètres",
+    adminPanelSettingsDescription: "Configurer les préférences du système",
     applicationsTitle: "Candidatures",
     applicationsDescription: "Gérez et examinez toutes les candidatures",
     applicationsSearchPlaceholder: "Rechercher par entreprise, catégorie ou candidat...",
