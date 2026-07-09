@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Mail, Briefcase, Send, Users, BarChart3, Settings } from "lucide-react";
 import { motion } from "framer-motion";
 
-import ProtectedAdminRoute from "@/components/Admin/ProtectedAdminRoute";
-import DashboardStats from "@/components/Admin/DashboardStats";
-import ActionCard from "@/components/Admin/ActionCard";
+import ProtectedAdminRoute from "@/Components/Admin/ProtectedAdminRoute";
+import DashboardStats from "@/Components/Admin/DashboardStats";
+import ActionCard from "@/Components/Admin/ActionCard";
 import adminService from "@/services/adminService";
 
 const SkeletonCard = ({ variant }) => {
