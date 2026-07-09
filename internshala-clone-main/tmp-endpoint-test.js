@@ -1,7 +1,7 @@
 const endpoints = [
-  { name: 'GET /api/users/me', url: 'http://localhost:5000/api/users/me' },
-  { name: 'GET /api/profile', url: 'http://localhost:5000/api/profile' },
-  { name: 'GET /api/user/profile', url: 'http://localhost:5000/api/user/profile' },
+  { name: 'GET /api/users/me', url: 'https://internarea-a04s.onrender.com/api/users/me' },
+  { name: 'GET /api/profile', url: 'https://internarea-a04s.onrender.com/api/profile' },
+  { name: 'GET /api/user/profile', url: 'https://internarea-a04s.onrender.com/api/user/profile' },
 ];
 
 async function fetchJsonText(url) {

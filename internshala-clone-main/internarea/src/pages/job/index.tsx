@@ -131,7 +131,7 @@ const index = () => {
       try {
         setLoading(true);
         setError(null);
-        const res = await axios.get("http://localhost:5000/api/job");
+        const res = await axios.get("https://internarea-a04s.onrender.com/api/job");
         setJobs(res.data || []);
       } catch (error) {
         console.log(error);

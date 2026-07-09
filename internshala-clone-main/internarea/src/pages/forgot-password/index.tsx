@@ -13,7 +13,7 @@ export default function ForgotPasswordPage() {
   const [isError, setIsError] = useState(false);
 
   const apiBase =
-    process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+    process.env.NEXT_PUBLIC_BACKEND_URL || "https://internarea-a04s.onrender.com";
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

@@ -39,7 +39,7 @@ export default function PublicSpace() {
   const user = useSelector(selectuser) as User | null;
 
   const apiBase = useMemo(() => {
-    return process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+    return process.env.NEXT_PUBLIC_BACKEND_URL || "https://internarea-a04s.onrender.com";
   }, []);
 
   const [caption, setCaption] = useState("");

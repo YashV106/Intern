@@ -15,7 +15,7 @@ export default function LoginPage() {
   const { t } = useLanguage();
 
   const apiBase = useMemo(() => {
-    return process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+    return process.env.NEXT_PUBLIC_BACKEND_URL || "https://internarea-a04s.onrender.com";
   }, []);
 
   const [credentials, setCredentials] = useState({

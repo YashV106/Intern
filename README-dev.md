@@ -8,7 +8,7 @@ From the repo root:
 - `npm run dev:all`
 
 ### Expected URLs
-- Backend (Express): http://localhost:5000
+- Backend (Express): https://internarea-a04s.onrender.com
 - Frontend (Next.js): http://localhost:3000
 
 ## Notes

@@ -139,7 +139,7 @@ export default function SvgSlider() {
     const fetchInternships = async () => {
       try {
         setInternshipsError("");
-        const res = await axios.get("http://localhost:5000/api/internship");
+        const res = await axios.get("https://internarea-a04s.onrender.com/api/internship");
         const apiInternships = Array.isArray(res.data) ? res.data : [];
         setInternships(
           apiInternships.length > 0 ? apiInternships : fallbackInternships
