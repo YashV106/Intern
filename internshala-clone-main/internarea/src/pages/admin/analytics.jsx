@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import ProtectedAdminRoute from "@/components/Admin/ProtectedAdminRoute";
+import ProtectedAdminRoute from "@/Components/Admin/ProtectedAdminRoute";
 
 export default function AdminAnalyticsPage() {
   return (
